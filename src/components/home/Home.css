@@ -43,6 +43,7 @@
 
 .dummy-div{
     background-color: #FB2576;
+    color: #FB2576;
 }
 .card-container{
     padding: 25px;
@@ -59,4 +60,19 @@
 .data-country{
     color: #FB2576;
     font-weight: 700;
+}
+.cases-country{
+    padding: 15px;
+    border-bottom: #B2B2B2 dashed;
+}
+.card-holder{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 20px;
+}
+.error-message{
+    color: red;
+}
+.error-container{
+    text-align: center;
 }

@@ -5,6 +5,7 @@ export const SearchContext = createContext();
 
 const SearchContextProvider = ({ children }) => {
   const [records, setRecords] = useState([]);
+  const [errMsg, setErrMsg] = useState('');
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -19,13 +20,14 @@ const SearchContextProvider = ({ children }) => {
         `https://api.covid19api.com/country/${data.country}/status/confirmed?from=${data.fromDate}&to=${data.toDate}`
       )
       .then((resolve) => setRecords(resolve.data))
-      .catch((rejected) => setRecords(rejected));
+      .catch((rejected) => setErrMsg('No Data try to explore another country!'));
   };
 
   const value = {
     records,
     setRecords,
     handleSearch,
+    errMsg
   };
 
   return (
