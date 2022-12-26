@@ -4,7 +4,7 @@ import { SearchContext } from "../context/SearchContext";
 export const StaticsCountry = () => {
     const {handleSearch} = useContext(SearchContext);
     return (
-    <div>
+    <div className="mid-home-container">
       <h3 className="country-heading">Get Statics for a specific country</h3>
       <div className="from-container">
         <form className="country-form" onSubmit={handleSearch}>

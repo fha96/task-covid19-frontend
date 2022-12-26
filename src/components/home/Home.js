@@ -7,7 +7,7 @@ import {SearchContext} from '../context/SearchContext'
 export const Home = () => {
   const {records, errMsg} = useContext(SearchContext)
   return (
-    <div>
+    <div className='main-home-container'>
         <StaticsCards />
         <StaticsCountry />
         <div className='card-holder'>

@@ -1,3 +1,7 @@
+.main-home-container{
+    min-height: 100vh;
+}
+
 
 .statics-heading{
     text-align: center;
@@ -69,10 +73,17 @@
     display: flex;
     flex-wrap: wrap;
     min-height: 20px;
+    justify-content: center;
 }
 .error-message{
+   
     color: red;
 }
 .error-container{
+    margin-top: 15px;
     text-align: center;
+}
+
+.mid-home-container{
+    margin-top: 50px;
 }
