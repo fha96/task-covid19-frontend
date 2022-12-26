@@ -19,7 +19,11 @@ const SearchContextProvider = ({ children }) => {
       .get(
         `https://api.covid19api.com/country/${data.country}/status/confirmed?from=${data.fromDate}&to=${data.toDate}`
       )
-      .then((resolve) => setRecords(resolve.data))
+      .then((resolve) =>{
+        setRecords(resolve.data)
+        setErrMsg('')
+      } 
+      )
       .catch((rejected) => setErrMsg('No Data try to explore another country!'));
   };
 
